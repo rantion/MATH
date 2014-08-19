@@ -20,7 +20,9 @@ public class Main {
 
             while((s=line.readLine())!=null){
                 String[] employeeParts = s.split("\\s+");
-                if(employeeParts.length==10 && employeeParts[2]=="B"){
+
+                if(employeeParts.length==10 && employeeParts[2].equals("B")){
+                    if(employeeParts[4].equals("1") || employeeParts[6].equals("1") || employeeParts[8].equals("1")) {
                 Employee employee = new Employee();
                 employee.setEmployeeID(employeeParts[0]);
                 employee.setDateOf(employeeParts[1]);
@@ -33,9 +35,11 @@ public class Main {
                 employee.setElement3(employeeParts[8]);
                 employee.setElement3Value(employeeParts[9]);
                 employees.add(employee);
-                    System.out.println(employee);
+//                System.out.println(employee);
+                    }
                 }
-                else if(employeeParts.length == 8 employeeParts[2]=="B" ){
+                else if(employeeParts.length == 8 && employeeParts[2].equals("B")){
+                    if(employeeParts[4].equals("1") || employeeParts[6].equals("1") ){
                     Employee employee = new Employee();
                     employee.setEmployeeID(employeeParts[0]);
                     employee.setDateOf(employeeParts[1]);
@@ -46,8 +50,11 @@ public class Main {
                     employee.setElement2(employeeParts[6]);
                     employee.setElement2Value(employeeParts[7]);
                     employees.add(employee);
+                        System.out.println(employee);
+                    }
                 }
-                else if(employeeParts.length == 6 && employeeParts[2]=="B"){
+                else if(employeeParts.length == 6 && employeeParts[2].equals("B")){
+                    if(employeeParts[4].equals("1")){
                     Employee employee = new Employee();
                     employee.setEmployeeID(employeeParts[0]);
                     employee.setDateOf(employeeParts[1]);
@@ -56,6 +63,8 @@ public class Main {
                     employee.setElement1(employeeParts[4]);
                     employee.setElement1Value(employeeParts[5]);
                     employees.add(employee);
+                        System.out.println(employee);
+                    }
                 }
             }
             line.close();
