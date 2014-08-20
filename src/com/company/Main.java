@@ -100,6 +100,11 @@ public class Main {
             Map.Entry pair = (Map.Entry) it.next();
             List<Employee> empDates = (List<Employee>) pair.getValue();
             System.out.println(pair.getKey());
+            System.out.println(".........................");
+            for(Employee emp: empDates){
+                System.out.println(emp);
+            }
+            System.out.println("\n");
         }
     }
 
